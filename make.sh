@@ -7,5 +7,6 @@ cd ..
 cp picpack.zip ./archived/`date +%m%d%H%M%S`.zip
 echo "`date +%F_%H:%M:%S`: make.sh : Made new picpack.zip." >> log.html
 echo "`date +%F_%H:%M:%S`: make.sh : Contents of picpack.zip : `ls annos/ -1 | tr -s '\n' ' '`" >> log.html
+sed -Ei "s/Last update: [0-9]{10}/Last update: `date +%m%d%H%M%S`/g" index.html
 echo "done"
 exit 0
