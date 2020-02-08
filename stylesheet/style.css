@@ -36,6 +36,9 @@ body{
     }
 }
 
-.footer{
-    height: 50px;
+@media (max-width: 456px){
+    .footerFixed{
+        position: absolute;
+        bottom: 0px;
+    }
 }
