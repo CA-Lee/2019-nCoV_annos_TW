@@ -3,5 +3,5 @@
 
 所有作品著作權屬原作者擁有。
 
-GitHub Page: https://ca-lee.github.io/2019-nCoV_annos_TW/
-HackMD: https://hackmd.io/8mcxozG1T3K2w3Ave9IgCA
+GitHub Page: https://ca-lee.github.io/2019-nCoV_annos_TW/  
+HackMD: [[挖坑] 防疫文宣彙整](https://hackmd.io/8mcxozG1T3K2w3Ave9IgCA)
