@@ -11,7 +11,7 @@ echo "`date +%F_%H:%M:%S`: make.sh : Contents of picpack.zip : `ls annos/ -1 | t
 sed -Ei "s/Last update: [0-9]{10}/Last update: `date +%m%d%H%M%S`/g" index.html
 
 git add .
-git git commit -m "update picpack.zip @ `date +%F_%H:%M:%S`"
+git commit -m "update picpack.zip @ `date +%F_%H:%M:%S`"
 
 echo "done"
 exit 0
