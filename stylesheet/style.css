@@ -1,0 +1,44 @@
+body{
+    font-family: "微軟正黑體", "Microsoft JhengHei", arial, sans-serif;
+}
+
+.banner{
+    height: 450px;
+}
+
+.m-minus-s{
+    margin-top: -50px;
+}
+.m-minus-l{
+    margin-top: -90px;
+}
+
+.textCenterBottom{
+    width:50%;
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .textCenterBottom{
+        width:43%;
+    }
+    .m-minus-s{
+        margin-top: -80px;
+    }
+
+    .m-minus-l{
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 767px){
+    .banner{
+        height: 100%;
+    }
+}
+
+@media (max-width: 456px){
+    .footerFixed{
+        position: absolute;
+        bottom: 0px;
+    }
+}
