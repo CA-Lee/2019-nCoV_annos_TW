@@ -35,10 +35,3 @@ body{
         height: 100%;
     }
 }
-
-@media (max-width: 456px){
-    .footerFixed{
-        position: absolute;
-        bottom: 0px;
-    }
-}
