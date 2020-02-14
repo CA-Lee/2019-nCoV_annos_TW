@@ -1,18 +1,60 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
     <title>台灣防疫文宣彙整</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
         body {
             background-color: black;
         }
+        div {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            max-height: 100vh;
+            max-width: 100vw;
+            height: auto;
+            width: auto;
+        }
     </style>
 </head>
+
 <body>
-    <img alt="a random image." id="ri">
-    <script>
-        document.getElementById("ri").src = "./annos/0210.jpg";
+
+    <div></div>
+
+    <script>$(document).ready(function () {
+
+            $.getJSON("https://api.github.com/repos/CA-Lee/2019-nCoV_annos_TW/commits", function (res) {
+                var treeurl = res[0]["commit"]["tree"]["url"];
+                //alert("url : " + treeurl);
+                $.getJSON(treeurl, function (res_treeurl) {
+                    //$("body").text(res_treeurl["tree"][0]["path"]);
+                    res_treeurl["tree"].forEach(function (val, i, arr) {
+                        //$("body").append(val["path"]+"<br>");
+                        if (val["path"] == "annos") {
+                            //$("body").text(val["url"]+"\n");
+                            $.getJSON(val["url"], function (res_valurl) {
+                                var rnd = Math.floor(Math.random() * res_valurl["tree"].length);
+                                $("div").html("<img src='https://ca-lee.github.io/2019-nCoV_annos_TW/annos/" + res_valurl["tree"][rnd]["path"] + "' alt='a random image.'>")
+                            });
+                        }
+                    });
+                });
+                //document.getElementsByTagName("body")[0].innerText = treeurl;
+
+            });
+
+        });
     </script>
 </body>
