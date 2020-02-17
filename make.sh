@@ -3,7 +3,7 @@ echo "start"
 
 git pull
 
-rm ./annos/*
+#rm ./annos/*
 rclone sync gd:buffer/GitHub ./annos --drive-shared-with-me
 
 [ -f "picpack.zip" ] && rm picpack.zip && echo "rm picpack.zip"
