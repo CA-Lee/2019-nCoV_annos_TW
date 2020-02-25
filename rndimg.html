@@ -57,7 +57,7 @@
                             $.getJSON(val["url"], function (res_valurl) {
                                 var rnd = Math.floor(Math.random() * res_valurl["tree"].length);
                                 $("div").html("<img src='https://ca-lee.github.io/2019-nCoV_annos_TW/annos/" + res_valurl["tree"][rnd]["path"] + "' alt='a random image.'>");
-setTimeout(function(location.reload();),60000);
+setTimeout(function(){location.reload();},60000);
                             });
                         }
                     });
